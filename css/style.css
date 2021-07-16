@@ -166,7 +166,7 @@ body {
 }
 
 .head__slide {
-    height: calc(100vh - 34px);
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.65);
@@ -205,4 +205,64 @@ body {
 .head__btn:active {
     background-color: #4d8501;
     box-shadow: none;
+}
+
+.head__progress {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 100px;
+    z-index: 9999;
+}
+
+.progress {
+    display: inline-block;
+    width: 80vw;
+    height: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right: 64px;
+    background-color: rgba(246, 246, 246, 0.2);
+    background-image: linear-gradient(to right, #7ab826, #7ab826);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+
+    transition: background-size 0.4s ease-in-out;
+}
+
+.arrows {
+    border-bottom: 2px solid #fff;
+    width: 10px;
+    height: 13px;
+    display: inline-block;
+}
+
+.slickPrev {
+    border-left: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.slickNext {
+    border-right: 1px solid #fff;
+    transform: rotate(315deg);
+}
+
+.pagingInfo {
+    display: inline-block;
+}
+
+.pagingCurrent {
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.pagingAll,
+.separator {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    opacity: 0.4;
+    position: relative;
+    bottom: 24px;
 }
