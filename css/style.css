@@ -216,18 +216,21 @@ body {
     z-index: 9999;
 }
 
+.head__progress > .container__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .progress {
-    display: inline-block;
-    width: 80vw;
+    width: 80%;
     height: 4px;
     border-radius: 4px;
     overflow: hidden;
-    margin-right: 64px;
     background-color: rgba(246, 246, 246, 0.2);
     background-image: linear-gradient(to right, #7ab826, #7ab826);
     background-repeat: no-repeat;
     background-size: 0 100%;
-
     transition: background-size 0.4s ease-in-out;
 }
 
@@ -249,7 +252,8 @@ body {
 }
 
 .pagingInfo {
-    display: inline-block;
+    display: flex;
+    justify-content: space-around;
 }
 
 .pagingCurrent {
@@ -259,7 +263,6 @@ body {
 
 .pagingAll,
 .separator {
-    display: inline-block;
     font-weight: 500;
     font-size: 16px;
     opacity: 0.4;
