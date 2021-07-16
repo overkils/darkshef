@@ -144,6 +144,10 @@ body {
     border-bottom: 2px solid transparent;
 }
 
+.header__select-label:first-child {
+    top: 7px;
+}
+
 .header__select-label:hover {
     border-bottom: 2px solid #fff;
     color: #fff;
