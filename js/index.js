@@ -18,3 +18,11 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
         selectSingle.setAttribute('data-state', '');
     });
 }
+
+const $slider = $('.head__slider');
+
+$slider.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+});

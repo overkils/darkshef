@@ -11,6 +11,17 @@ body {
     padding: 22px 0;
     background-color: #010101;
     opacity: 0.85;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.container {
+    max-width: 1176px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .container__header {
@@ -140,4 +151,58 @@ body {
 
 .header__select-label:last-child {
     top: 35px;
+}
+
+.head__slider {
+    height: 100vh;
+    position: relative;
+}
+
+.head__slider::after {
+    content: url(../image/food__bg.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.head__slide {
+    height: calc(100vh - 34px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.65);
+    background-blend-mode: darken;
+}
+
+.head__title {
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 904px;
+    font-weight: 700;
+    font-size: 72px;
+    margin-bottom: 62px;
+}
+
+.head__subtitle {
+    display: block;
+    font-weight: 300;
+    font-size: 24px;
+    margin-top: 22px;
+}
+
+.head__btn {
+    padding: 22px 61px;
+    border: 1px solid transparent;
+    background-color: #7ab826;
+    transition: box-shadow 0.3s, color 0.3s, background-color 0.3s;
+}
+
+.head__btn:hover {
+    color: #fff;
+    box-shadow: 0px 12px 40px rgba(122, 184, 38, 0.25);
+}
+
+.head__btn:active {
+    background-color: #4d8501;
+    box-shadow: none;
 }
