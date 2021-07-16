@@ -1,0 +1,142 @@
+body {
+    font-family: "Jost", sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.6px;
+    line-height: 1.3;
+    color: #f6f6f6;
+    background-color: #010101;
+}
+
+.header {
+    padding: 22px 0;
+    background-color: #010101;
+    opacity: 0.85;
+}
+
+.container__header {
+    margin: 0 auto;
+    max-width: 1680px;
+    padding: 0 15px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.at-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.at-menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.at-menu__link {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.at-menu__item {
+    grid-column: auto;
+}
+
+.header__logo {
+    margin-right: 10vw;
+}
+
+.header__address {
+    display: grid;
+    grid-template-columns: 1fr 72px;
+    grid-template-rows: 1fr;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header__tel {
+    grid-column: 1 / 2;
+    letter-spacing: 0.05em;
+}
+
+.header__sity {
+    font-size: 16px;
+    font-weight: 500;
+    background-color: transparent;
+    border: transparent;
+    outline: transparent;
+    color: #f6f6f6;
+    grid-column: 2 / 3;
+}
+
+.header__sity option {
+    background-color: transparent;
+}
+
+.header__cart {
+    grid-column: 3 / 4;
+}
+
+.header__select-title {
+    position: relative;
+    cursor: pointer;
+}
+
+.header__select-title::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid #f6f6f6;
+    border-right: 2px solid #f6f6f6;
+    transform: rotate(45deg);
+    cursor: pointer;
+    top: 7px;
+    right: 0;
+    transition: transform 0.3s, top 0.3s;
+}
+
+.header__select[data-state="active"] > .header__select-title::after {
+    transform: rotate(225deg);
+    top: 9px;
+}
+
+.header__select {
+    position: relative;
+}
+
+.header__select-content {
+    position: absolute;
+    height: 70px;
+    transform: translateY(-200px);
+    transition: transform 0.65s;
+}
+
+.header__select[data-state="active"] > .header__select-content {
+    transform: translateY(0);
+}
+
+.header__select-input {
+    display: none;
+}
+
+.header__select-label {
+    position: absolute;
+    cursor: pointer;
+    transition: border-bottom 0.3s, color 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.header__select-label:hover {
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+
+.header__select-label:last-child {
+    top: 35px;
+}

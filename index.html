@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="by">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/atolla-reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/burger-menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>DarkChef</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container__header">
+            <nav class="header__nav">
+                <a href="#" class="header__logo logo">
+                    <img src="image/logo.png" alt="logo">
+                </a>
+                <nav class="at-menu">
+                    <button class="at-menu__btn" aria-label="Open the menu">
+                        <span class="at-menu__line"></span>
+                    </button>
+                    <ul class="at-menu__list">
+                        <li class="at-menu__item">
+                            <a href="#a1" class="at-menu__link">Рационы</a>
+                        </li>
+                        <li class="at-menu__item">
+                            <a href="#a2" class="at-menu__link">Преимущества</a>
+                        </li>
+                        <li class="at-menu__item">
+                            <a href="#a3" class="at-menu__link">Меню</a>
+                        </li>
+                        <li class="at-menu__item">
+                            <a href="#a4" class="at-menu__link">Доставка и оплата</a>
+                        </li>
+                    </ul>
+                </nav>
+                <address class="header__address">
+                    <span class="header__tel">+375 (44) 733-80-84</span>
+                    <form>
+                        <div class="header__select" data-state="">
+                            <div class="header__select-title" data-default="Option 0">Минск</div>
+                            <div class="header__select-content">
+                                <input id="singleSelect0" class="header__select-input" type="radio" name="singleSelect"
+                                    checked />
+                                <label for="singleSelect0" class="header__select-label">Минск</label>
+                                <input id="singleSelect1" class="header__select-input" type="radio"
+                                    name="singleSelect" />
+                                <label for="singleSelect1" class="header__select-label">Гомель</label>
+                            </div>
+                        </div>
+                    </form>
+                </address>
+                <span class="header__cart">
+                    <img src="image/cart.svg" alt="cart">
+                </span>
+            </nav>
+        </div>
+    </header>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
