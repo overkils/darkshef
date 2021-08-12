@@ -28,16 +28,16 @@
                     </button>
                     <ul class="at-menu__list">
                         <li class="at-menu__item">
-                            <a href="#a1" class="at-menu__link">Рационы</a>
+                            <a href="#rations" class="at-menu__link">Рационы</a>
                         </li>
                         <li class="at-menu__item">
-                            <a href="#a2" class="at-menu__link">Преимущества</a>
+                            <a href="#about-me" class="at-menu__link">Преимущества</a>
                         </li>
                         <li class="at-menu__item">
-                            <a href="#a3" class="at-menu__link">Меню</a>
+                            <a href="#menus" class="at-menu__link">Меню</a>
                         </li>
                         <li class="at-menu__item">
-                            <a href="#a4" class="at-menu__link">Доставка и оплата</a>
+                            <a href="#help" class="at-menu__link">Доставка и оплата</a>
                         </li>
                     </ul>
                 </nav>
@@ -264,7 +264,7 @@
                 </ul>
             </div>
         </section>
-        <section class="menu">
+        <section class="menu" id="menus">
             <div class="container">
                 <h2 class="title menu__title">Меню</h2>
                 <div class="menu__menu-date">
@@ -312,10 +312,9 @@
                             <button type="button" class="calendar__btn">вс 04.07</button>
                         </li>
                     </ul>
-                    <form class="calendar__forms">
-                        <label for="calendar"></label>
-                        <input id="calendar" type="date" class="calendar__form" min="2021-06-21" max="2021-07-04">
-                    </form>
+                    <span class="calendar__btns">
+                        <input class="calendar__inputs" type="date">
+                    </span>
                 </div>
                 <div class="menu__menu-list">
                     <ul class="menu__menu-items">
@@ -492,7 +491,7 @@
                 </div>
             </div>
         </section>
-        <section class="help">
+        <section class="help" id="help">
             <div class="container">
                 <h2 class="title help__title">Не можете определиться?</h2>
                 <div class="help__text">
@@ -567,7 +566,6 @@
                                 </clipPath>
                             </defs>
                         </svg>
-
                     </a>
                 </div>
             </address>

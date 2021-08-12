@@ -16,17 +16,17 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
     selectSingle_labels[i].addEventListener('click', (evt) => {
         selectSingle_title.textContent = evt.target.textContent;
         selectSingle.setAttribute('data-state', '');
-        Cookies.set('sity', selectSingle_title.textContent);
+        Cookies.set('city', selectSingle_title.textContent);
     });
 };
 
-console.log(Cookies.get('sity'));
+console.log(Cookies.get('city'));
 
 var blocks = document.querySelector('.header__select-title');
-if (Cookies.get('sity') == undefined) {
+if (Cookies.get('city') == undefined) {
     blocks.textContent = "Минск";
 } else {
-    blocks.textContent = Cookies.get('sity');
+    blocks.textContent = Cookies.get('city');
 }
 
 console.log(blocks);
@@ -74,6 +74,7 @@ $('.calendar__items').slick({
     infinite: true,
 });
 
+
 const selectSingles = document.querySelector('.menu-header__select');
 const selectSingle_titles = selectSingles.querySelector('.menu-header__select-title');
 const selectSingle_labelss = selectSingles.querySelectorAll('.menu-header__select-label');
@@ -96,10 +97,30 @@ for (let i = 0; i < selectSingle_labelss.length; i++) {
     });
 };
 
-
-
 if (Cookies.get('eat') == undefined) {
     selectSingle_titles.innerHTML = "<span class='menu-header__title'>Офис<span class='menu-header__kcal'>900 калл.</span></span>";
 } else {
     selectSingle_titles.innerHTML = Cookies.get('eat');
 }
+
+const calendar = document.querySelector(".calendar__inputs");
+
+console.log(calendar);
+
+Cookies.set("date", calendar.value);
+console.log(Cookies.get("date"));
+
+
+
+// calendar.addEventListener('click', () => {
+    //     document.querySelector(".calendar__btns").style.backgroundColor = "#2E2E2E";
+    // });
+
+    // for (calendar = 0; calendar.value != ""; calendar++) {
+
+    //     if (calendar.value != "") {
+    //         document.querySelector(".calendar__btns").style.backgroundColor = "#111111";
+    //     } else {
+    //         console.log("error");
+    //     }
+    // }

@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Jost", sans-serif;
     font-size: 24px;
@@ -19,7 +23,7 @@ body {
 }
 
 .container {
-    max-width: 1176px;
+    max-width: 1206px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -453,6 +457,7 @@ body {
 .menu__menu-date {
     display: flex;
     flex-direction: row;
+    margin-bottom: 24px;
 }
 
 .calendar__items {
@@ -486,8 +491,25 @@ body {
     background-color: #4d8501;
 }
 
-.calendar__forms {
-    display: none;
+.calendar__btns {
+    width: 76px;
+    height: 76px;
+    cursor: pointer;
+    background-color: #111;
+    position: relative;
+    background-image: url("../image/calendar.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.calendar__inputs {
+    position: absolute;
+    top: 0;
+    left: -8px;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
 
 .menu__menu-list {
@@ -575,7 +597,7 @@ body {
     margin-left: 24px;
     padding: 24px 24px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    width: 426px;
+    width: 376px;
     position: relative;
     max-height: 390px;
 }
@@ -722,7 +744,7 @@ body {
     margin-left: -25px;
     margin-right: -26px;
     background-color: #7ab826;
-    padding: 20px 168px;
+    padding: 20px 143px;
     transition: box-shadow 0.3s, color 0.3s, background-color 0.3s;
 }
 
