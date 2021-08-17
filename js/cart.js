@@ -5,8 +5,7 @@ const rations1 = document.querySelector(".choise__item-rations1");
 
 rations1.addEventListener('click', () => {
     document.querySelector(".selected__items").insertAdjacentHTML('afterbegin', `<li class="selected__item" id="ration1">
-    <button class="selected__del-btn"
-        onclick="document.querySelector('#ration1').style.display = 'none' ">
+    <button class="selected__del-btn" onclick="parentElement.remove()">
         <img src="image/delete__btn.svg" alt="delete button">
     </button>
     <div class="selected__body">
