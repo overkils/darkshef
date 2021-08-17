@@ -32,12 +32,7 @@ rations1.addEventListener('click', () => {
         </form>
     </div>
 </li>`);
-    // choise.style.opacity = "0";
-    // choise.style.zIndex = "-1";
-    // setTimeout(`choise.style.display = "none"`, 500)
-    // selected.style.display = "block";
-    // selected.style.opacity = "1";
-    // selected.style.zIndex = "2";
+    addingProducts();
 });
 
 const rations2 = document.querySelector(".choise__item-rations2");
@@ -70,6 +65,7 @@ rations2.addEventListener('click', () => {
         </form>
     </div>
 </li>`);
+    addingProducts();
 });
 
 const rations3 = document.querySelector(".choise__item-rations3");
@@ -102,6 +98,7 @@ rations3.addEventListener('click', () => {
         </form>
     </div>
 </li>`);
+    addingProducts();
 });
 
 const rations4 = document.querySelector(".choise__item-rations4");
@@ -134,6 +131,7 @@ rations4.addEventListener('click', () => {
         </form>
     </div>
 </li>`);
+    addingProducts();
 });
 
 const rations5 = document.querySelector(".choise__item-rations5");
@@ -166,6 +164,7 @@ rations5.addEventListener('click', () => {
         </form>
     </div>
 </li>`);
+    addingProducts();
 });
 
 const rations6 = document.querySelector(".choise__item-rations6");
@@ -198,6 +197,7 @@ rations6.addEventListener('click', () => {
         </form>
     </div>
 </li>`);
+    addingProducts();
 });
 
 const rations7 = document.querySelector(".choise__item-rations7");
@@ -230,6 +230,7 @@ rations7.addEventListener('click', () => {
         </form>
     </div>
 </li>`);
+    addingProducts();
 });
 
 const rations8 = document.querySelector(".choise__item-rations8");
@@ -262,6 +263,7 @@ rations8.addEventListener('click', () => {
         </form>
     </div>
 </li>`);
+    addingProducts();
 });
 
 const rations9 = document.querySelector(".choise__item-rations9");
@@ -294,6 +296,7 @@ rations9.addEventListener('click', () => {
         </form>
     </div>
 </li>`);
+    addingProducts();
 });
 
 function closet() {
@@ -305,6 +308,14 @@ function closet() {
 };
 
 function opens() {
+    setTimeout(`selected.style.display = "block"`, 500);
+    setTimeout(`choise.style.display = "none"`, 500);
+    selected.style.opacity = '1';
+    selected.style.zIndex = '2';
+    choise.style.opacity = "0";
+};
+
+function addingProducts() {
     setTimeout(`selected.style.display = "block"`, 500);
     setTimeout(`choise.style.display = "none"`, 500);
     selected.style.opacity = '1';
