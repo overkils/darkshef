@@ -502,6 +502,16 @@ body {
     background-position: center center;
 }
 
+.calendar__btns::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -90px;
+    width: 90px;
+    height: 76px;
+    background-image: linear-gradient(270deg, #010101 0%, rgba(1, 1, 1, 0) 100%);
+}
+
 .calendar__inputs {
     position: absolute;
     top: 0;
@@ -862,9 +872,6 @@ body {
     grid-column: 3 /4;
 }
 
-.footer__contacts {
-}
-
 .footer__number {
     display: flex;
     flex-direction: column;
@@ -906,4 +913,197 @@ body {
 
 .footer__social:hover {
     transform: scale(1.3);
+}
+
+.carriage {
+    padding-top: 148px;
+    padding-bottom: 160px;
+}
+
+.carriage__title {
+    margin-bottom: 64px;
+}
+
+.cart__choise {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+}
+
+.choise__back {
+    padding: 28px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #7ab826;
+    border-color: transparent;
+    outline: transparent;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.choise__arrow-icn {
+    transform: translateX(-8px);
+    transition: transform 0.3s;
+}
+
+.choise__back:hover > .choise__arrow-icn {
+    transform: translateX(-16px);
+}
+
+.choise__items {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choise__item {
+    width: 100%;
+    padding: 24px;
+    background-color: #111;
+    transition: transform 0.5s;
+    display: flex;
+    cursor: pointer;
+}
+
+.choise__item:hover {
+    transform: scale(1.05);
+}
+
+.choise__item:not(:last-child) {
+    border-bottom: 1px solid rgba(246, 246, 246, 0.2);
+}
+
+.choise__icons {
+    margin-right: 20px;
+}
+
+.choise__name {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.choise__kcal {
+    font-weight: 300;
+    font-size: 24px;
+    text-transform: none;
+    margin-left: 20px;
+}
+
+.cart__selected {
+    transition: opacity 0.5s;
+}
+
+.selected__add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 42px 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #111;
+    outline: transparent;
+    border-color: transparent;
+    transition: background-color 0.5s;
+}
+
+.selected__add-btn {
+    transition: transform 0.3s;
+    transform: translateX(8px);
+}
+
+.selected__add:hover {
+    background-color: #2e2e2e;
+}
+
+.selected__add:hover .selected__add-btn {
+    transform: translateX(24px) scale(2);
+}
+
+.selected__items {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.selected__item {
+    display: flex;
+    align-items: center;
+}
+
+.selected__del-btn {
+    margin-right: 24px;
+}
+
+.selected__body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: 24px;
+}
+
+.body__title {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-right: 112px;
+    width: 150px;
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+
+.body__subtitle {
+    margin-top: 4px;
+    font-weight: 300;
+    font-size: 16px;
+    text-transform: none;
+}
+
+.body__period {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+}
+
+.body__period label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.period__prices {
+    margin-top: 4px;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+}
+
+.body__period input {
+    display: none;
+}
+
+.choisen {
+    background-color: #7ab826;
 }

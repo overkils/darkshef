@@ -107,20 +107,27 @@ const calendar = document.querySelector(".calendar__inputs");
 
 console.log(calendar);
 
-Cookies.set("date", calendar.value);
-console.log(Cookies.get("date"));
+let prevalue = calendar.value;
 
+calendar.onclick = function () {
+    prevalue = calendar.value;
+    document.querySelector(".calendar__btns").style.backgroundColor = "#2E2E2E";
+    document.querySelector(".calendar__btns").style.transition = "all 0.5s";
+}
 
+calendar.onchange = function () {
+    Cookies.set("date", calendar.value);
+    console.log(Cookies.get("date"));
+    document.querySelector(".calendar__btns").style.backgroundColor = "#111111";
+}
 
-// calendar.addEventListener('click', () => {
-    //     document.querySelector(".calendar__btns").style.backgroundColor = "#2E2E2E";
-    // });
+// const texts = document.querySelectorAll(".calendar__btn");
 
-    // for (calendar = 0; calendar.value != ""; calendar++) {
+// for (let i = 0; i <= texts.length; i++) {
+//     console.log(texts[i].innerText)
+// };
 
-    //     if (calendar.value != "") {
-    //         document.querySelector(".calendar__btns").style.backgroundColor = "#111111";
-    //     } else {
-    //         console.log("error");
-    //     }
-    // }
+const days = new Date();
+
+var options = { weekday: "short", year: 'numeric', month: "long", day: 'numeric' }
+console.log(days.toLocaleDateString('ru-RU', options));
