@@ -111,6 +111,7 @@ let prevalue = calendar.value;
 
 calendar.onclick = function () {
     prevalue = calendar.value;
+
     document.querySelector(".calendar__btns").style.backgroundColor = "#2E2E2E";
     document.querySelector(".calendar__btns").style.transition = "all 0.5s";
 }
@@ -126,6 +127,8 @@ calendar.onchange = function () {
 // for (let i = 0; i <= texts.length; i++) {
 //     console.log(texts[i].innerText)
 // };
+
+
 
 const days = new Date();
 

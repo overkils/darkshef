@@ -491,35 +491,27 @@ body {
     background-color: #4d8501;
 }
 
-.calendar__btns {
-    width: 76px;
-    height: 76px;
-    cursor: pointer;
-    background-color: #111;
-    position: relative;
-    background-image: url("../image/calendar.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.calendar__btns::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -90px;
-    width: 90px;
-    height: 76px;
-    background-image: linear-gradient(270deg, #010101 0%, rgba(1, 1, 1, 0) 100%);
-}
-
 .calendar__inputs {
-    position: absolute;
-    top: 0;
-    left: -8px;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
+    border: none;
+    outline: none;
     cursor: pointer;
+    background-color: #000;
+}
+
+.calendar__inputs::-webkit-datetime-edit {
+    display: none;
+}
+
+.calendar__inputs::-webkit-calendar-picker-indicator {
+    background-image: url(../image/calendar.svg);
+    background-size: 40%;
+    background-color: #111;
+    background-position: center center;
+    cursor: pointer;
+    margin: 0;
+    margin-left: -1px;
+    width: 76px !important;
+    height: 72px !important;
 }
 
 .menu__menu-list {
