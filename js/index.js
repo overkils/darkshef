@@ -134,3 +134,13 @@ const days = new Date();
 
 var options = { weekday: "short", year: 'numeric', month: "long", day: 'numeric' }
 console.log(days.toLocaleDateString('ru-RU', options));
+
+const calendarFF = document.querySelector('.calendar__icon-ff')
+
+var usrAg = navigator.userAgent;
+
+if (usrAg.indexOf("Firefox") > -1) {
+    calendar.style.display = 'none';
+} else {
+    calendarFF.style.display = 'none';
+}
