@@ -16,17 +16,17 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
     selectSingle_labels[i].addEventListener('click', (evt) => {
         selectSingle_title.textContent = evt.target.textContent;
         selectSingle.setAttribute('data-state', '');
-        Cookies.set('city', selectSingle_title.textContent);
+        docCookies.setItem("sity", selectSingle_title.textContent);
     });
 };
 
-console.log(Cookies.get('city'));
+console.log(docCookies.getItem("sity"));
 
 var blocks = document.querySelector('.header__select-title');
-if (Cookies.get('city') == undefined) {
+if (docCookies.getItem("sity") == undefined) {
     blocks.textContent = "Минск";
 } else {
-    blocks.textContent = Cookies.get('city');
+    blocks.textContent = docCookies.getItem("sity");
 }
 
 console.log(blocks);
@@ -93,14 +93,14 @@ for (let i = 0; i < selectSingle_labelss.length; i++) {
     selectSingle_labelss[i].addEventListener('click', (evt) => {
         selectSingle_titles.innerHTML = evt.target.innerHTML;
         selectSingles.setAttribute('data-state', '');
-        Cookies.set('eat', selectSingle_titles.innerHTML);
+        docCookies.setItem("eat", selectSingle_titles.innerHTML);
     });
 };
 
-if (Cookies.get('eat') == undefined) {
+if (docCookies.getItem("eat") == undefined) {
     selectSingle_titles.innerHTML = "<span class='menu-header__title'>Офис<span class='menu-header__kcal'>900 калл.</span></span>";
 } else {
-    selectSingle_titles.innerHTML = Cookies.get('eat');
+    selectSingle_titles.innerHTML = docCookies.getItem("eat");
 }
 
 const calendar = document.querySelector(".calendar__inputs");
@@ -117,8 +117,8 @@ calendar.onclick = function () {
 }
 
 calendar.onchange = function () {
-    Cookies.set("date", calendar.value);
-    console.log(Cookies.get("date"));
+    docCookies.setItem("date", calendar.value);
+    console.log(docCookies.getItem("date"));
     document.querySelector(".calendar__btns").style.backgroundColor = "#111111";
 }
 

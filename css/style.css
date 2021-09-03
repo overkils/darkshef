@@ -121,7 +121,7 @@ body {
     border-right: 2px solid #f6f6f6;
     transform: rotate(45deg);
     cursor: pointer;
-    top: 7px;
+    top: 5px;
     right: 0;
     transition: transform 0.3s, top 0.3s;
 }
