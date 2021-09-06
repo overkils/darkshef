@@ -1,3 +1,27 @@
+// const sityFirst = document.querySelector('#sityFirst');
+// const sitySecond = document.querySelector('#sitySecond');
+// const modal = document.querySelector('.modal');
+// const structureHead = document.querySelector('.header');
+// const structureMain = document.querySelector('main');
+// const structureFooter = document.querySelector('.footer');
+
+// if (docCookies.getItem("sity") == undefined) {
+//     sityFirst.style.backgroundColor = "#7ab826";
+// } else {
+
+// }
+
+// function modals() {
+//     setTimeout(`modal.style.display = "none"`, 500);
+//     structure();
+// }
+
+// function structure() {
+//     setTimeout(`structureHead.style.display = "block"`, 500);
+//     setTimeout(`structureMain.style.display = "block"`, 500);
+//     setTimeout(`structureFooter.style.display = "block"`, 500);
+// }
+
 const selectSingle = document.querySelector('.header__select');
 const selectSingle_title = selectSingle.querySelector('.header__select-title');
 const selectSingle_labels = selectSingle.querySelectorAll('.header__select-label');
