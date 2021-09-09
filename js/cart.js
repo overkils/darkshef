@@ -321,3 +321,18 @@ function addingProducts() {
     selected.style.zIndex = '2';
     choise.style.opacity = "0";
 };
+
+const date_btn = document.querySelector('.input__date-btn');
+const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+
+
+(function () {
+    $('.input__date-btn').on('change', function () {
+        var date = new Date($('.input__date-btn').val());
+        day = date.getDate();
+        month = date.getMonth();
+        document.querySelector('.input__date-day').value = day;
+        document.querySelector('.input__date-month').value = months[month];
+    });
+})();

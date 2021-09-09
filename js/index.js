@@ -8,7 +8,6 @@
 // if (docCookies.getItem("sity") == undefined) {
 //     sityFirst.style.backgroundColor = "#7ab826";
 // } else {
-
 // }
 
 // function modals() {
@@ -86,6 +85,7 @@ $slider.slick({
     arrows: true,
     prevArrow: $('.slickPrev'),
     nextArrow: $('.slickNext'),
+    reInit: true,
 });
 
 setProgress(0);
@@ -96,6 +96,7 @@ $('.calendar__items').slick({
     arrows: false,
     dots: false,
     infinite: true,
+    reInit: true,
 });
 
 
@@ -168,3 +169,7 @@ if (usrAg.indexOf("Firefox") > -1) {
 } else {
     calendarFF.style.display = 'none';
 }
+
+$(function () {
+    $("#tel").mask("+375(99)999-99-99");
+});

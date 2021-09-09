@@ -67,317 +67,336 @@
         <section class="carriage">
             <div class="container">
                 <h2 class="carriage__title title">Корзина</h2>
-                <div class="cart">
-                    <div class="cart__choise" style="display: none;">
-                        <button class="choise__back" type="button" onclick="opens()">
-                            <img src="image/arrow_back.svg" alt="icon" class="choise__arrow-icn">
-                            Назад
-                        </button>
-                        <ul class="choise__items">
-                            <li class="choise__item choise__item-rations1">
-                                <span class="choise__name">Офис
-                                    <span class="choise__kcal">900 калл.</span>
-                                </span>
-                            </li>
-                            <li class="choise__item choise__item-rations2">
-                                <span class="choise__name">Легкий
-                                    <span class="choise__kcal">1100 калл.</span>
-                                </span>
-                            </li>
-                            <li class="choise__item choise__item-rations3">
-                                <span class="choise__name">Фитнес
-                                    <span class="choise__kcal">1300 калл.</span>
-                                </span>
-                            </li>
-                            <li class="choise__item choise__item-rations4">
-                                <span class="choise__name">Спорт
-                                    <span class="choise__kcal">1600 калл.</span>
-                                </span>
-                            </li>
-                            <li class="choise__item choise__item-rations5">
-                                <span class="choise__name">Баланс
-                                    <span class="choise__kcal">2000 калл.</span>
-                                </span>
-                            </li>
-                            <li class="choise__item choise__item-rations6">
-                                <span class="choise__name">Сила
-                                    <span class="choise__kcal">2400 калл.</span>
-                                </span>
-                            </li>
-                            <li class="choise__item choise__item-rations7">
-                                <span class="choise__name">Супер
-                                    <span class="choise__kcal">3200 калл.</span>
-                                </span>
-                            </li>
-                            <li class="choise__item choise__item-rations8">
-                                <img class="choise__icons" src="image/eco.svg" alt="icon">
-                                <span class="choise__name">vegan
-                                    <span class="choise__kcal">1300 калл.</span>
-                                </span>
-                            </li>
-                            <li class="choise__item choise__item-rations9">
-                                <img class="choise__icons" src="image/eco.svg" alt="icon">
-                                <span class="choise__name">Vegan+
-                                    <span class="choise__kcal">2000 калл.</span>
-                                </span>
-                            </li>
-                        </ul>
+                <div class="carriage__content">
+                    <div class="cart">
+                        <div class="cart__choise" style="display: none;">
+                            <button class="choise__back" type="button" onclick="opens()">
+                                <img src="image/arrow_back.svg" alt="icon" class="choise__arrow-icn">
+                                Назад
+                            </button>
+                            <ul class="choise__items">
+                                <li class="choise__item choise__item-rations1">
+                                    <span class="choise__name">Офис
+                                        <span class="choise__kcal">900 калл.</span>
+                                    </span>
+                                </li>
+                                <li class="choise__item choise__item-rations2">
+                                    <span class="choise__name">Легкий
+                                        <span class="choise__kcal">1100 калл.</span>
+                                    </span>
+                                </li>
+                                <li class="choise__item choise__item-rations3">
+                                    <span class="choise__name">Фитнес
+                                        <span class="choise__kcal">1300 калл.</span>
+                                    </span>
+                                </li>
+                                <li class="choise__item choise__item-rations4">
+                                    <span class="choise__name">Спорт
+                                        <span class="choise__kcal">1600 калл.</span>
+                                    </span>
+                                </li>
+                                <li class="choise__item choise__item-rations5">
+                                    <span class="choise__name">Баланс
+                                        <span class="choise__kcal">2000 калл.</span>
+                                    </span>
+                                </li>
+                                <li class="choise__item choise__item-rations6">
+                                    <span class="choise__name">Сила
+                                        <span class="choise__kcal">2400 калл.</span>
+                                    </span>
+                                </li>
+                                <li class="choise__item choise__item-rations7">
+                                    <span class="choise__name">Супер
+                                        <span class="choise__kcal">3200 калл.</span>
+                                    </span>
+                                </li>
+                                <li class="choise__item choise__item-rations8">
+                                    <img class="choise__icons" src="image/eco.svg" alt="icon">
+                                    <span class="choise__name">vegan
+                                        <span class="choise__kcal">1300 калл.</span>
+                                    </span>
+                                </li>
+                                <li class="choise__item choise__item-rations9">
+                                    <img class="choise__icons" src="image/eco.svg" alt="icon">
+                                    <span class="choise__name">Vegan+
+                                        <span class="choise__kcal">2000 калл.</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cart__selected">
+                            <ul class="selected__items">
+                                <!-- <li class="selected__item" id="ration1">
+                                    <button class="selected__del-btn" onclick="parentElement.remove()">
+                                        <img src="image/delete__btn.svg" alt="delete button">
+                                    </button>
+                                    <div class="selected__body">
+                                        <span class="body__title">Офис
+                                            <span class="body__subtitle">900 калл.</span>
+                                        </span>
+                                        <form action="#" class="body__period">
+                                            <label>
+                                                день
+                                                <span class="period__prices">30.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>
+                                                1 Неделя
+                                                <span class="period__prices">220.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>
+                                                1 Месяц
+                                                <span class="period__prices">600.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li class="selected__item" id="ration2">
+                                    <button class="selected__del-btn" onclick="parentElement.remove()">
+                                        <img src="image/delete__btn.svg" alt="delete button">
+                                    </button>
+                                    <div class="selected__body">
+                                        <span class="body__title">Легкий
+                                            <span class="body__subtitle">1100 калл.</span>
+                                        </span>
+                                        <form action="#" class="body__period">
+                                            <label>1
+                                                день
+                                                <span class="period__prices">30.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Неделя
+                                                <span class="period__prices">220.00 Byn</span>
+                                                <input onclick="parentElement.classList.toggle('choisen')" type="checkbox">
+                                            </label>
+                                            <label>1
+                                                Месяц
+                                                <span class="period__prices">600.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li class="selected__item" id="ration3">
+                                    <button class="selected__del-btn" onclick="parentElement.remove()">
+                                        <img src="image/delete__btn.svg" alt="delete button">
+                                    </button>
+                                    <div class="selected__body">
+                                        <span class="body__title">Фитнес
+                                            <span class="body__subtitle">1300 калл.</span>
+                                        </span>
+                                        <form action="#" class="body__period">
+                                            <label>1
+                                                день
+                                                <span class="period__prices">30.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Неделя
+                                                <span class="period__prices">220.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Месяц
+                                                <span class="period__prices">600.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li class="selected__item" id="ration4">
+                                    <button class="selected__del-btn" onclick="parentElement.remove()">
+                                        <img src="image/delete__btn.svg" alt="delete button">
+                                    </button>
+                                    <div class="selected__body">
+                                        <span class="body__title">Спорт
+                                            <span class="body__subtitle">1600 калл.</span>
+                                        </span>
+                                        <form action="#" class="body__period">
+                                            <label>1
+                                                день
+                                                <span class="period__prices">30.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Неделя
+                                                <span class="period__prices">220.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Месяц
+                                                <span class="period__prices">600.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li class="selected__item" id="ration5">
+                                    <button class="selected__del-btn" onclick="parentElement.remove()">
+                                        <img src="image/delete__btn.svg" alt="delete button">
+                                    </button>
+                                    <div class="selected__body">
+                                        <span class="body__title">Баланс
+                                            <span class="body__subtitle">2000 калл.</span>
+                                        </span>
+                                        <form action="#" class="body__period">
+                                            <label>1
+                                                день
+                                                <span class="period__prices">30.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Неделя
+                                                <span class="period__prices">220.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Месяц
+                                                <span class="period__prices">600.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li class="selected__item" id="ration6">
+                                    <button class="selected__del-btn" onclick="parentElement.remove()">
+                                        <img src="image/delete__btn.svg" alt="delete button">
+                                    </button>
+                                    <div class="selected__body">
+                                        <span class="body__title">Сила
+                                            <span class="body__subtitle">2400 калл.</span>
+                                        </span>
+                                        <form action="#" class="body__period">
+                                            <label>1
+                                                день
+                                                <span class="period__prices">30.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Неделя
+                                                <span class="period__prices">220.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Месяц
+                                                <span class="period__prices">600.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li class="selected__item" id="ration7">
+                                    <button class="selected__del-btn" onclick="parentElement.remove()">
+                                        <img src="image/delete__btn.svg" alt="delete button">
+                                    </button>
+                                    <div class="selected__body">
+                                        <span class="body__title">Супер
+                                            <span class="body__subtitle">3200 калл.</span>
+                                        </span>
+                                        <form action="#" class="body__period">
+                                            <label>1
+                                                день
+                                                <span class="period__prices">30.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Неделя
+                                                <span class="period__prices">220.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Месяц
+                                                <span class="period__prices">600.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li class="selected__item" id="ration8">
+                                    <button class="selected__del-btn" onclick="parentElement.remove()">
+                                        <img src="image/delete__btn.svg" alt="delete button">
+                                    </button>
+                                    <div class="selected__body">
+                                        <span class="body__title">vegan
+                                            <span class="body__subtitle">1300 калл.</span>
+                                        </span>
+                                        <form action="#" class="body__period">
+                                            <label>1
+                                                день
+                                                <span class="period__prices">30.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Неделя
+                                                <span class="period__prices">220.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Месяц
+                                                <span class="period__prices">600.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li class="selected__item" id="ration9">
+                                    <button class="selected__del-btn" onclick="parentElement.remove()">
+                                        <img src="image/delete__btn.svg" alt="delete button">
+                                    </button>
+                                    <div class="selected__body">
+                                        <span class="body__title">Vegan+
+                                            <span class="body__subtitle">2000 калл.</span>
+                                        </span>
+                                        <form action="#" class="body__period">
+                                            <label>1
+                                                день
+                                                <span class="period__prices">30.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Неделя
+                                                <span class="period__prices">220.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                            <label>1
+                                                Месяц
+                                                <span class="period__prices">600.00 Byn</span>
+                                                <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
+                                            </label>
+                                        </form>
+                                    </div>
+                                </li> -->
+                            </ul>
+                            <button class="selected__add" type="button" onclick="closet()">
+                                Добавить рацион
+                                <img class="selected__add-btn" src="image/add__btn.svg" alt="icon adding">
+                            </button>
+                        </div>
                     </div>
-                    <div class="cart__selected">
-                        <ul class="selected__items">
-                            <!-- <li class="selected__item" id="ration1">
-                                <button class="selected__del-btn" onclick="parentElement.remove()">
-                                    <img src="image/delete__btn.svg" alt="delete button">
-                                </button>
-                                <div class="selected__body">
-                                    <span class="body__title">Офис
-                                        <span class="body__subtitle">900 калл.</span>
-                                    </span>
-                                    <form action="#" class="body__period">
-                                        <label>
-                                            день
-                                            <span class="period__prices">30.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>
-                                            1 Неделя
-                                            <span class="period__prices">220.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>
-                                            1 Месяц
-                                            <span class="period__prices">600.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                    </form>
-                                </div>
-                            </li>
-                            <li class="selected__item" id="ration2">
-                                <button class="selected__del-btn" onclick="parentElement.remove()">
-                                    <img src="image/delete__btn.svg" alt="delete button">
-                                </button>
-                                <div class="selected__body">
-                                    <span class="body__title">Легкий
-                                        <span class="body__subtitle">1100 калл.</span>
-                                    </span>
-                                    <form action="#" class="body__period">
-                                        <label>1
-                                            день
-                                            <span class="period__prices">30.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Неделя
-                                            <span class="period__prices">220.00 Byn</span>
-                                            <input onclick="parentElement.classList.toggle('choisen')" type="checkbox">
-                                        </label>
-                                        <label>1
-                                            Месяц
-                                            <span class="period__prices">600.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                    </form>
-                                </div>
-                            </li>
-                            <li class="selected__item" id="ration3">
-                                <button class="selected__del-btn" onclick="parentElement.remove()">
-                                    <img src="image/delete__btn.svg" alt="delete button">
-                                </button>
-                                <div class="selected__body">
-                                    <span class="body__title">Фитнес
-                                        <span class="body__subtitle">1300 калл.</span>
-                                    </span>
-                                    <form action="#" class="body__period">
-                                        <label>1
-                                            день
-                                            <span class="period__prices">30.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Неделя
-                                            <span class="period__prices">220.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Месяц
-                                            <span class="period__prices">600.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                    </form>
-                                </div>
-                            </li>
-                            <li class="selected__item" id="ration4">
-                                <button class="selected__del-btn" onclick="parentElement.remove()">
-                                    <img src="image/delete__btn.svg" alt="delete button">
-                                </button>
-                                <div class="selected__body">
-                                    <span class="body__title">Спорт
-                                        <span class="body__subtitle">1600 калл.</span>
-                                    </span>
-                                    <form action="#" class="body__period">
-                                        <label>1
-                                            день
-                                            <span class="period__prices">30.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Неделя
-                                            <span class="period__prices">220.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Месяц
-                                            <span class="period__prices">600.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                    </form>
-                                </div>
-                            </li>
-                            <li class="selected__item" id="ration5">
-                                <button class="selected__del-btn" onclick="parentElement.remove()">
-                                    <img src="image/delete__btn.svg" alt="delete button">
-                                </button>
-                                <div class="selected__body">
-                                    <span class="body__title">Баланс
-                                        <span class="body__subtitle">2000 калл.</span>
-                                    </span>
-                                    <form action="#" class="body__period">
-                                        <label>1
-                                            день
-                                            <span class="period__prices">30.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Неделя
-                                            <span class="period__prices">220.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Месяц
-                                            <span class="period__prices">600.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                    </form>
-                                </div>
-                            </li>
-                            <li class="selected__item" id="ration6">
-                                <button class="selected__del-btn" onclick="parentElement.remove()">
-                                    <img src="image/delete__btn.svg" alt="delete button">
-                                </button>
-                                <div class="selected__body">
-                                    <span class="body__title">Сила
-                                        <span class="body__subtitle">2400 калл.</span>
-                                    </span>
-                                    <form action="#" class="body__period">
-                                        <label>1
-                                            день
-                                            <span class="period__prices">30.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Неделя
-                                            <span class="period__prices">220.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Месяц
-                                            <span class="period__prices">600.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                    </form>
-                                </div>
-                            </li>
-                            <li class="selected__item" id="ration7">
-                                <button class="selected__del-btn" onclick="parentElement.remove()">
-                                    <img src="image/delete__btn.svg" alt="delete button">
-                                </button>
-                                <div class="selected__body">
-                                    <span class="body__title">Супер
-                                        <span class="body__subtitle">3200 калл.</span>
-                                    </span>
-                                    <form action="#" class="body__period">
-                                        <label>1
-                                            день
-                                            <span class="period__prices">30.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Неделя
-                                            <span class="period__prices">220.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Месяц
-                                            <span class="period__prices">600.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                    </form>
-                                </div>
-                            </li>
-                            <li class="selected__item" id="ration8">
-                                <button class="selected__del-btn" onclick="parentElement.remove()">
-                                    <img src="image/delete__btn.svg" alt="delete button">
-                                </button>
-                                <div class="selected__body">
-                                    <span class="body__title">vegan
-                                        <span class="body__subtitle">1300 калл.</span>
-                                    </span>
-                                    <form action="#" class="body__period">
-                                        <label>1
-                                            день
-                                            <span class="period__prices">30.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Неделя
-                                            <span class="period__prices">220.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Месяц
-                                            <span class="period__prices">600.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                    </form>
-                                </div>
-                            </li>
-                            <li class="selected__item" id="ration9">
-                                <button class="selected__del-btn" onclick="parentElement.remove()">
-                                    <img src="image/delete__btn.svg" alt="delete button">
-                                </button>
-                                <div class="selected__body">
-                                    <span class="body__title">Vegan+
-                                        <span class="body__subtitle">2000 калл.</span>
-                                    </span>
-                                    <form action="#" class="body__period">
-                                        <label>1
-                                            день
-                                            <span class="period__prices">30.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Неделя
-                                            <span class="period__prices">220.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                        <label>1
-                                            Месяц
-                                            <span class="period__prices">600.00 Byn</span>
-                                            <input type="checkbox" onclick="parentElement.classList.toggle('choisen')">
-                                        </label>
-                                    </form>
-                                </div>
-                            </li> -->
-                        </ul>
-                        <button class="selected__add" type="button" onclick="closet()">
-                            Добавить рацион
-                            <img class="selected__add-btn" src="image/add__btn.svg" alt="icon adding">
-                        </button>
-                    </div>
+                    <aside class="form">
+                        <span class="form__title">
+                            Контактные данные
+                        </span>
+                        <form action="#" class="form__forms">
+                            <input type="tel" id="tel" class="forms__input" placeholder="+375 (__)___-__-__ ">
+                            <input type="text" class="forms__input" placeholder="Имя">
+                            <input type="text" class="forms__input" placeholder="Адрес">
+                            <span class="forms__input-date">
+                                дата доставкки
+                            </span>
+                            <div class="forms__input-dates">
+                                <input type="text" class="input__date-day forms__input input__date" placeholder="08"
+                                    maxlength="2">
+                                <input type="text" class="input__date-month forms__input input__date" placeholder="Июль"
+                                    maxlength="8">
+                                <input type="date" class="input__date-btn ">
+                            </div>
+                        </form>
+                    </aside>
                 </div>
-                <aside class="form">
-
-                </aside>
             </div>
         </section>
     </main>
@@ -450,7 +469,8 @@
             </address>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.0/dist/js.cookie.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/cookies.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/index.js"></script>

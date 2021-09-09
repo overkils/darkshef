@@ -513,9 +513,10 @@ body {
     background-position: center center;
     cursor: pointer;
     margin: 0;
+    padding: 0;
     margin-left: -1px;
     width: 76px !important;
-    height: 72px !important;
+    height: 76px !important;
 }
 
 .calendar__icon-ff {
@@ -947,6 +948,17 @@ body {
     margin-bottom: 64px;
 }
 
+.carriage__content {
+    display: flex;
+    justify-content: start;
+}
+
+.cart {
+    max-width: 774px;
+    width: 100%;
+    margin-right: 24px;
+}
+
 .cart__choise {
     flex-direction: column;
     justify-content: center;
@@ -1058,16 +1070,21 @@ body {
 .selected__items {
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
 }
 
 .selected__item {
     display: flex;
     align-items: center;
+    position: relative;
+}
+
+.selected__item:last-child {
+    margin-bottom: 40px;
 }
 
 .selected__del-btn {
-    margin-right: 24px;
+    left: -48px;
+    position: absolute;
 }
 
 .selected__body {
@@ -1131,16 +1148,102 @@ body {
     background-color: #7ab826;
 }
 
-/* .header,
-main,
-.footer {
+.form {
+    max-width: 376px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 24px;
+}
+
+.form__title {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.form__forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.forms__input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.forms__input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+}
+
+.forms__input-date {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.forms__input-dates {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.input__date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.input__date-day {
+    max-width: 52px;
+    margin-right: 24px;
+}
+
+.input__date-month {
+    max-width: 200px;
+    margin-right: 12px;
+}
+
+.input__date-btn {
+    background-color: transparent;
+    border: none;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 20px;
+}
+
+.input__date-btn::-webkit-datetime-edit {
     display: none;
-} */
+}
+
+.input__date-btn::-webkit-calendar-picker-indicator {
+    background-image: url(../image/calendar.svg);
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #111;
+    padding: 0;
+    margin: 0;
+    width: 36px;
+    height: 36px;
+}
 
 .modal {
     background-image: url(../image/header__slider.jpg);
     height: 100vh;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: darken;
     background-color: rgba(1, 1, 1, 0.8);
