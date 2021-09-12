@@ -469,12 +469,17 @@
             </address>
         </div>
     </footer>
-    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/cookies.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/cart.js"></script>
+    <script>
+        $(function () {
+            $("#tel").mask("+375(99)999-99-99");
+        });
+    </script>
 </body>
 
 </html>

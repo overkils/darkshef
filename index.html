@@ -9,14 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/slick.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/burger-menu.css">
     <link rel="stylesheet" href="css/style.css">
     <title>DarkChef</title>
 </head>
 
 <body>
-    <!-- <section class="modal">
+    <section class="modal">
         <div class="container">
             <nav class="modal__nav">
                 <a class="nav__logo" href="#">
@@ -31,7 +32,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <header class="header">
         <div class="container__header">
@@ -82,8 +83,8 @@
     </header>
     <main>
         <section class="head-slider">
-            <ul class="head__slider">
-                <li class="head__slide" style="background-image: url('image/header__slider.jpg');">
+            <ul class="swiper-wrapper head__slider">
+                <li class="swiper-slide head__slide" style="background-image: url('image/header__slider.jpg');">
                     <div class="container">
                         <h2 class="head__title">
                             Семейные традиции правильного питания
@@ -92,7 +93,7 @@
                         <a href="#" class="head__btn">Попробовать</a>
                     </div>
                 </li>
-                <li class="head__slide" style="background-image: url('image/header__slider.jpg');">
+                <li class="swiper-slide head__slide" style="background-image: url('image/header__slider.jpg');">
                     <div class="container">
                         <h2 class="head__title">
                             Семейные традиции правильного питания
@@ -101,7 +102,7 @@
                         <a href="#" class="head__btn">Попробовать</a>
                     </div>
                 </li>
-                <li class="head__slide" style="background-image: url('image/header__slider.jpg');">
+                <li class="swiper-slide head__slide" style="background-image: url('image/header__slider.jpg');">
                     <div class="container">
                         <h2 class="head__title">
                             Семейные традиции правильного питания
@@ -110,7 +111,7 @@
                         <a href="#" class="head__btn">Попробовать</a>
                     </div>
                 </li>
-                <li class="head__slide" style="background-image: url('image/header__slider.jpg');">
+                <li class="swiper-slide head__slide" style="background-image: url('image/header__slider.jpg');">
                     <div class="container">
                         <h2 class="head__title">
                             Семейные традиции правильного питания
@@ -119,7 +120,7 @@
                         <a href="#" class="head__btn">Попробовать</a>
                     </div>
                 </li>
-                <li class="head__slide" style="background-image: url('image/header__slider.jpg');">
+                <li class="swiper-slide head__slide" style="background-image: url('image/header__slider.jpg');">
                     <div class="container">
                         <h2 class="head__title">
                             Семейные традиции правильного питания
@@ -128,7 +129,7 @@
                         <a href="#" class="head__btn">Попробовать</a>
                     </div>
                 </li>
-                <li class="head__slide" style="background-image: url('image/header__slider.jpg');">
+                <li class="swiper-slide head__slide" style="background-image: url('image/header__slider.jpg');">
                     <div class="container">
                         <h2 class="head__title">
                             Семейные традиции правильного питания
@@ -140,8 +141,8 @@
             </ul>
             <div class="head__progress">
                 <div class="container__header">
-                    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    <button type="button" class="slickPrev arrows">
+                    <div class="progress" role="progressbar"></div>
+                    <button type="button" class="swiper-button-prev arrows">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19.88 22.12L13.7733 16L19.88 9.88L18 8L10 16L18 24L19.88 22.12Z" fill="#F6F6F6" />
                         </svg>
@@ -151,7 +152,7 @@
                         <span class="separator">\</span>
                         <span class="pagingAll"></span>
                     </div>
-                    <button type="button" class="slickNext arrows">
+                    <button type="button" class="swiper-button-next arrows">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.12 9.88L18.2267 16L12.12 22.12L14 24L22 16L14 8L12.12 9.88Z" fill="#F6F6F6" />
                         </svg>
@@ -293,50 +294,52 @@
             <div class="container">
                 <h2 class="title menu__title">Меню</h2>
                 <div class="menu__menu-date">
-                    <ul class="calendar__items">
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">пн 21-06</button>
-                        </li>
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">вт 22-06</button>
-                        </li>
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">ср 23-06</button>
-                        </li>
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">чт 24-06</button>
-                        </li>
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">Пт 25-06</button>
-                        </li>
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">сб 26-06</button>
-                        </li>
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">вс 27.06</button>
-                        </li>
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">ПН 28-06</button>
-                        </li>
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">вт 29-06</button>
-                        </li>
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">ср 30-06</button>
-                        </li>
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">чт 01-07</button>
-                        </li>
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">Пт 02-07</button>
-                        </li>
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">сб 03-07</button>
-                        </li>
-                        <li class="calendar__item">
-                            <button type="button" class="calendar__btn">вс 04.07</button>
-                        </li>
-                    </ul>
+                    <div class="swiper__calendar">
+                        <ul class="calendar__items swiper-wrapper">
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">пн 21-06</button>
+                            </li>
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">вт 22-06</button>
+                            </li>
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">ср 23-06</button>
+                            </li>
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">чт 24-06</button>
+                            </li>
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">Пт 25-06</button>
+                            </li>
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">сб 26-06</button>
+                            </li>
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">вс 27.06</button>
+                            </li>
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">ПН 28-06</button>
+                            </li>
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">вт 29-06</button>
+                            </li>
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">ср 30-06</button>
+                            </li>
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">чт 01-07</button>
+                            </li>
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">Пт 02-07</button>
+                            </li>
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">сб 03-07</button>
+                            </li>
+                            <li class="calendar__item swiper-slide">
+                                <button type="button" class="calendar__btn">вс 04.07</button>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="calendars">
                         <input class="calendar__inputs" type="date">
                         <span class="calendar__icon-ff">
@@ -599,9 +602,9 @@
             </address>
         </div>
     </footer>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/cookies.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/slick.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 

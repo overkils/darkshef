@@ -1,25 +1,25 @@
-// const sityFirst = document.querySelector('#sityFirst');
-// const sitySecond = document.querySelector('#sitySecond');
-// const modal = document.querySelector('.modal');
-// const structureHead = document.querySelector('.header');
-// const structureMain = document.querySelector('main');
-// const structureFooter = document.querySelector('.footer');
+const sityFirst = document.querySelector('#sityFirst');
+const sitySecond = document.querySelector('#sitySecond');
+const modal = document.querySelector('.modal');
+const structureHead = document.querySelector('.header');
+const structureMain = document.querySelector('main');
+const structureFooter = document.querySelector('.footer');
 
-// if (docCookies.getItem("sity") == undefined) {
-//     sityFirst.style.backgroundColor = "#7ab826";
-// } else {
-// }
+if (docCookies.getItem("sity") == undefined) {
+    sityFirst.style.backgroundColor = "#7ab826";
+} else {
+}
 
-// function modals() {
-//     setTimeout(`modal.style.display = "none"`, 500);
-//     structure();
-// }
+function modals() {
+    setTimeout(`modal.style.display = "none"`, 500);
+    structure();
+}
 
-// function structure() {
-//     setTimeout(`structureHead.style.display = "block"`, 500);
-//     setTimeout(`structureMain.style.display = "block"`, 500);
-//     setTimeout(`structureFooter.style.display = "block"`, 500);
-// }
+function structure() {
+    setTimeout(`structureHead.style.display = "block"`, 500);
+    setTimeout(`structureMain.style.display = "block"`, 500);
+    setTimeout(`structureFooter.style.display = "block"`, 500);
+}
 
 const selectSingle = document.querySelector('.header__select');
 const selectSingle_title = selectSingle.querySelector('.header__select-title');
@@ -54,51 +54,29 @@ if (docCookies.getItem("sity") == undefined) {
 
 console.log(blocks);
 
-const $slider = $('.head__slider');
-const $progressBar = $('.progress');
-
-var $status = $('.pagingCurrent');
-var $pagingAll = $('.pagingAll');
-var $slickElement = $slider;
-
-function setProgress(index) {
-    const calc = ((index + 1) / ($slider.slick('getSlick').slideCount)) * 100;
-    $progressBar
-        .css('background-size', `${calc}% 100%`)
-        .attr('aria-valuenow', calc);
-}
-
-$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-    var i = (currentSlide ? currentSlide : 0) + 1;
-    // $status.text(i + '/' + slick.slideCount);
-    $status.text('0' + i);
-    $pagingAll.text('0' + slick.slideCount);
+var swiper = new Swiper(".head-slider", {
+    pagination: {
+        el: ".container__header",
+        type: "custom",
+        renderCustom: function (swiper, current, total) {
+            document.querySelector('.pagingCurrent').innerHTML = "0" + current;
+            document.querySelector('.pagingAll').innerHTML = "0" + total;
+            const calc = (current / total) * 100;
+            document.querySelector('.progress').style.backgroundSize = calc + "%";
+        }
+    },
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    speed: 600,
 });
 
-$slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-    setProgress(nextSlide);
+var swiper__calendar = new Swiper(".swiper__calendar", {
+    loop: true,
+    slidesPerView: 7,
 });
-
-$slider.slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    prevArrow: $('.slickPrev'),
-    nextArrow: $('.slickNext'),
-    reInit: true,
-});
-
-setProgress(0);
-
-$('.calendar__items').slick({
-    slidesToShow: 7,
-    slidesToScroll: 3,
-    arrows: false,
-    dots: false,
-    infinite: true,
-    reInit: true,
-});
-
 
 const selectSingles = document.querySelector('.menu-header__select');
 const selectSingle_titles = selectSingles.querySelector('.menu-header__select-title');
@@ -170,6 +148,3 @@ if (usrAg.indexOf("Firefox") > -1) {
     calendarFF.style.display = 'none';
 }
 
-$(function () {
-    $("#tel").mask("+375(99)999-99-99");
-});

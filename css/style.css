@@ -175,11 +175,16 @@ body {
     position: relative;
 }
 
-.head__slider::after {
+.head-slider {
+    position: relative;
+}
+
+.head-slider::after {
     content: url(../image/food__bg.png);
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 11;
 }
 
 .head__slide {
@@ -255,6 +260,20 @@ body {
     width: 32px;
     height: 32px;
     display: inline-block;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: unset;
+    top: unset;
+    right: unset;
+    left: unset;
+    margin-top: unset;
 }
 
 .pagingInfo {
@@ -449,6 +468,12 @@ body {
     margin-bottom: 24px;
 }
 
+.swiper__calendar {
+    max-height: 76px !important;
+    max-width: 1100px;
+    overflow: hidden;
+}
+
 .calendar__items {
     max-height: 76px !important;
     max-width: 1100px;
@@ -467,9 +492,10 @@ body {
     text-transform: uppercase;
     background-color: transparent;
     font-size: 12px;
+    padding: 0;
     letter-spacing: 0.03em;
     transition: background-color 0.3s;
-    border: 1px solid transparent;
+    border: none;
 }
 
 .calendar__btn:hover {
@@ -1238,6 +1264,12 @@ body {
     margin: 0;
     width: 36px;
     height: 36px;
+}
+
+.header,
+main,
+.footer {
+    display: none;
 }
 
 .modal {
