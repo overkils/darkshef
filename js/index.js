@@ -6,12 +6,18 @@ const structureMain = document.querySelector('main');
 const structureFooter = document.querySelector('.footer');
 
 if (docCookies.getItem("sity") == undefined) {
-    sityFirst.style.backgroundColor = "#7ab826";
-} else {
+    modalWindow();
 }
 
-function modals() {
+function modalWindow() {
+    structures("none");
+    modal.style.display = "block";
+    sityFirst.style.backgroundColor = "#7ab826";
+}
+
+function modals(nameSity) {
     setTimeout(`modal.style.display = "none"`, 500);
+    docCookies.setItem("sity", nameSity.textContent);
     structure();
 }
 
@@ -19,6 +25,22 @@ function structure() {
     setTimeout(`structureHead.style.display = "block"`, 500);
     setTimeout(`structureMain.style.display = "block"`, 500);
     setTimeout(`structureFooter.style.display = "block"`, 500);
+}
+
+function structures(parametrs) {
+    structureHead.style.display = parametrs;
+    structureMain.style.display = parametrs;
+    structureFooter.style.display = parametrs;
+}
+
+function editSity() {
+    var blocks = document.querySelector('.header__select-title');
+    if (docCookies.getItem("sity") == undefined) {
+        blocks.textContent = "Минск";
+    } else {
+        blocks.textContent = docCookies.getItem("sity");
+    }
+    console.log(blocks);
 }
 
 const selectSingle = document.querySelector('.header__select');
@@ -44,15 +66,7 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
 };
 
 console.log(docCookies.getItem("sity"));
-
-var blocks = document.querySelector('.header__select-title');
-if (docCookies.getItem("sity") == undefined) {
-    blocks.textContent = "Минск";
-} else {
-    blocks.textContent = docCookies.getItem("sity");
-}
-
-console.log(blocks);
+editSity();
 
 var swiper = new Swiper(".head-slider", {
     pagination: {

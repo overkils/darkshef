@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/burger-menu.css">
     <link rel="stylesheet" href="css/style.css">
@@ -17,7 +16,7 @@
 </head>
 
 <body>
-    <section class="modal">
+    <section class="modal" style="display: none;">
         <div class="container">
             <nav class="modal__nav">
                 <a class="nav__logo" href="#">
@@ -27,8 +26,10 @@
             <div class="modal__sity">
                 <h1 class="sity__title">С какого <br> вы города?</h1>
                 <div class="sity__btns">
-                    <button type="button" class="sity__btn" id="sityFirst" onclick="modals()">Минск</button>
-                    <button type="button" class="sity__btn" id="sitySecond" onclick="modals()">Гомель</button>
+                    <button type="button" class="sity__btn" id="sityFirst"
+                        onclick="modals(sityFirst); editSity()">Минск</button>
+                    <button type="button" class="sity__btn" id="sitySecond"
+                        onclick="modals(sitySecond); editSity()">Гомель</button>
                 </div>
             </div>
         </div>

@@ -1266,12 +1266,6 @@ body {
     height: 36px;
 }
 
-.header,
-main,
-.footer {
-    display: none;
-}
-
 .modal {
     background-image: url(../image/header__slider.jpg);
     height: 100vh;
