@@ -1178,9 +1178,10 @@ body {
     max-width: 376px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 24px;
+    max-height: 472px;
 }
 
 .form__title {
@@ -1211,6 +1212,10 @@ body {
     letter-spacing: 0.03em;
 }
 
+.forms__input:nth-child(3) {
+    margin-bottom: 40px;
+}
+
 .forms__input-date {
     font-weight: 700;
     font-size: 12px;
@@ -1223,6 +1228,7 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .input__date {
@@ -1230,6 +1236,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0;
+    margin-bottom: unset;
 }
 
 .input__date-day {
@@ -1247,7 +1255,6 @@ body {
     border: none;
     width: 36px;
     height: 36px;
-    margin-bottom: 20px;
 }
 
 .input__date-btn::-webkit-datetime-edit {
@@ -1264,6 +1271,39 @@ body {
     margin: 0;
     width: 36px;
     height: 36px;
+}
+
+.sum {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.sum__title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.sum__total-prices {
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.form__btn {
+    width: 115.65%;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    background-color: #7ab826;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px 0;
+    margin-left: -25px;
 }
 
 .modal {
