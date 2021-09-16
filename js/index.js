@@ -161,7 +161,3 @@ if (usrAg.indexOf("Firefox") > -1) {
 } else {
     calendarFF.style.display = 'none';
 }
-
-if (usrAg.indexOf("Safari") > -1) {
-    alert("Извиняемся, в данном браузере не который функционал сайта работать не будет, воспользуйте другим браузером по типу Google Chrome");
-}
