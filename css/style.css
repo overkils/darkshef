@@ -1270,7 +1270,36 @@ body {
     padding: 0;
     margin: 0;
     width: 36px;
+    outline: transparent;
     height: 36px;
+}
+
+.input__date-btn--ff {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    background-size: 55%;
+    background-image: url(../image/calendar.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #111;
+    padding: 0;
+    margin: 0;
+}
+
+.date__btn-ff {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+    outline: transparent;
+    font-size: 0;
 }
 
 .sum {

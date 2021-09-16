@@ -162,3 +162,6 @@ if (usrAg.indexOf("Firefox") > -1) {
     calendarFF.style.display = 'none';
 }
 
+if (usrAg.indexOf("Safari") > -1) {
+    alert("Извиняемся, на данном устройстве не который функционал сайта работать не будет, воспользуйте другим браузером по типу Google Chrome");
+}
